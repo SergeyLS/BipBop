@@ -8,20 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		F71C435F20494327004CDCFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71C435E20494327004CDCFF /* AppDelegate.swift */; };
-		F71C436120494327004CDCFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71C436020494327004CDCFF /* ViewController.swift */; };
+		F71C436120494327004CDCFF /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71C436020494327004CDCFF /* FirstViewController.swift */; };
 		F71C436420494327004CDCFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F71C436220494327004CDCFF /* Main.storyboard */; };
 		F71C436620494327004CDCFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F71C436520494327004CDCFF /* Assets.xcassets */; };
 		F71C436920494327004CDCFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F71C436720494327004CDCFF /* LaunchScreen.storyboard */; };
+		F71C43722049441E004CDCFF /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71C43712049441E004CDCFF /* CALayer.swift */; };
+		F71C437D20495068004CDCFF /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71C437C20495068004CDCFF /* TabBarViewController.swift */; };
+		F71C4380204950EE004CDCFF /* ContainerTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71C437F204950EE004CDCFF /* ContainerTab.swift */; };
+		F71C4383204952D1004CDCFF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71C4382204952D1004CDCFF /* BaseViewController.swift */; };
+		F71C438520495671004CDCFF /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71C438420495671004CDCFF /* GameViewController.swift */; };
+		F71C438720495D6E004CDCFF /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71C438620495D6E004CDCFF /* GameTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F71C435B20494327004CDCFF /* BipBop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BipBop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F71C435E20494327004CDCFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F71C436020494327004CDCFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F71C436020494327004CDCFF /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		F71C436320494327004CDCFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F71C436520494327004CDCFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F71C436820494327004CDCFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F71C436A20494327004CDCFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F71C43712049441E004CDCFF /* CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
+		F71C437C20495068004CDCFF /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		F71C437F204950EE004CDCFF /* ContainerTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerTab.swift; sourceTree = "<group>"; };
+		F71C4382204952D1004CDCFF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		F71C438420495671004CDCFF /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		F71C438620495D6E004CDCFF /* GameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +66,52 @@
 		F71C435D20494327004CDCFF /* BipBop */ = {
 			isa = PBXGroup;
 			children = (
+				F71C437E204950C5004CDCFF /* Model */,
+				F71C4373204944B5004CDCFF /* ViewControllers */,
+				F71C4370204943FD004CDCFF /* Extensions */,
 				F71C435E20494327004CDCFF /* AppDelegate.swift */,
-				F71C436020494327004CDCFF /* ViewController.swift */,
 				F71C436220494327004CDCFF /* Main.storyboard */,
 				F71C436520494327004CDCFF /* Assets.xcassets */,
 				F71C436720494327004CDCFF /* LaunchScreen.storyboard */,
 				F71C436A20494327004CDCFF /* Info.plist */,
 			);
 			path = BipBop;
+			sourceTree = "<group>";
+		};
+		F71C4370204943FD004CDCFF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F71C43712049441E004CDCFF /* CALayer.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F71C4373204944B5004CDCFF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F71C4381204952B5004CDCFF /* Base */,
+				F71C436020494327004CDCFF /* FirstViewController.swift */,
+				F71C437C20495068004CDCFF /* TabBarViewController.swift */,
+				F71C438420495671004CDCFF /* GameViewController.swift */,
+				F71C438620495D6E004CDCFF /* GameTableViewCell.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F71C437E204950C5004CDCFF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F71C437F204950EE004CDCFF /* ContainerTab.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F71C4381204952B5004CDCFF /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F71C4382204952D1004CDCFF /* BaseViewController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +186,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F71C436120494327004CDCFF /* ViewController.swift in Sources */,
+				F71C438520495671004CDCFF /* GameViewController.swift in Sources */,
+				F71C437D20495068004CDCFF /* TabBarViewController.swift in Sources */,
+				F71C43722049441E004CDCFF /* CALayer.swift in Sources */,
+				F71C436120494327004CDCFF /* FirstViewController.swift in Sources */,
 				F71C435F20494327004CDCFF /* AppDelegate.swift in Sources */,
+				F71C4380204950EE004CDCFF /* ContainerTab.swift in Sources */,
+				F71C4383204952D1004CDCFF /* BaseViewController.swift in Sources */,
+				F71C438720495D6E004CDCFF /* GameTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +333,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UR2UCZHHPB;
 				INFOPLIST_FILE = BipBop/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SergeyLeskov.BipBop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -292,6 +349,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UR2UCZHHPB;
 				INFOPLIST_FILE = BipBop/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SergeyLeskov.BipBop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
