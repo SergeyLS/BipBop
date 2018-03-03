@@ -18,7 +18,7 @@ class FirstViewController: BaseViewController {
     //==================================================
     // MARK: - General
     //==================================================
-    override func viewDidLoad() {
+    internal override func viewDidLoad() {
         super.viewDidLoad()
         
         self.centerViewUI.layer.cornerRadius = self.centerViewUI.layer.bounds.height / 2

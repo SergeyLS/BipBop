@@ -36,7 +36,7 @@ class TabBarViewController: BaseViewController {
     //==================================================
     // MARK: - General
     //==================================================
-    override func viewDidLoad() {
+    internal override func viewDidLoad() {
         super.viewDidLoad()
         
         self.topViewUI.backgroundColor = Constants.Colors.blue

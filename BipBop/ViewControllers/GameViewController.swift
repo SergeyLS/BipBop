@@ -29,7 +29,7 @@ class GameViewController: BaseViewController {
     //==================================================
     // MARK: - General
     //==================================================
-    override func viewDidLoad() {
+    internal override func viewDidLoad() {
         super.viewDidLoad()
         
         self.fieldBipUI.layer.borderWidth = 1.0
@@ -47,7 +47,7 @@ class GameViewController: BaseViewController {
     //==================================================
     // MARK: - func
     //==================================================
-    func reloadData() {
+    fileprivate func reloadData() {
         
         self.fieldBipUI.text = String(self.bip)
         self.fieldBopUI.text = String(self.bop)
@@ -61,12 +61,12 @@ class GameViewController: BaseViewController {
         self.tableView.reloadData()
     }
     
-    func changeBipBop()  {
+    fileprivate func changeBipBop()  {
         if let text = fieldBipUI.text,
             let newBip = Int(text) {
             self.bip = (newBip == 0) ? Constants.Default.bip: newBip
         } else {
-             self.bip = Constants.Default.bip
+            self.bip = Constants.Default.bip
         }
         
         if let text = fieldBopUI.text,
@@ -108,18 +108,18 @@ class GameViewController: BaseViewController {
 extension GameViewController: UITableViewDelegate, UITableViewDataSource {
     
     //numberOfSections
-    func numberOfSections(in tableView: UITableView) -> Int {
+    internal func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     //numberOfRowsInSection
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return self.rows.count
     }
     
     //cellForRowAt
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: self.cellName, for: indexPath)
         
         let row = self.rows[indexPath.row]
