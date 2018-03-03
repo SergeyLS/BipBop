@@ -66,7 +66,6 @@
 			children = (
 				F71C437E204950C5004CDCFF /* Model */,
 				F71C4373204944B5004CDCFF /* ViewControllers */,
-				F71C4370204943FD004CDCFF /* Extensions */,
 				F71C435E20494327004CDCFF /* AppDelegate.swift */,
 				F7439AAE204AB43E006096F1 /* Constants.swift */,
 				F71C436220494327004CDCFF /* Main.storyboard */,
@@ -75,13 +74,6 @@
 				F71C436A20494327004CDCFF /* Info.plist */,
 			);
 			path = BipBop;
-			sourceTree = "<group>";
-		};
-		F71C4370204943FD004CDCFF /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		F71C4373204944B5004CDCFF /* ViewControllers */ = {
