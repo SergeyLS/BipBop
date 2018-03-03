@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -95,7 +94,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.38431372549019605" green="0.45098039215686275" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="K5R-9m-lM6" secondAttribute="bottom" constant="5" id="2qD-8c-IjJ"/>
                                     <constraint firstItem="Vbk-Uw-faR" firstAttribute="width" secondItem="K5R-9m-lM6" secondAttribute="width" id="BUS-AR-kdi"/>
@@ -140,6 +139,7 @@
                         <outlet property="containerPlayUI" destination="hB1-QY-coe" id="sXl-1N-QVE"/>
                         <outlet property="explanationButtonUI" destination="K5R-9m-lM6" id="CBI-20-quv"/>
                         <outlet property="playButtonUI" destination="Vbk-Uw-faR" id="lEW-wm-LoD"/>
+                        <outlet property="topViewUI" destination="oe4-WA-d9R" id="DTO-h6-bMf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dxs-nh-ZOn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -160,7 +160,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mCj-WD-znM">
                                         <rect key="frame" x="187.5" y="0.0" width="187.5" height="100"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Egn-q6-dtE">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Egn-q6-dtE">
                                                 <rect key="frame" x="10" y="40" width="75" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="75" id="LPp-g2-Uo4"/>
@@ -169,6 +169,10 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                <connections>
+                                                    <action selector="bipBegin:" destination="rzg-8R-MCt" eventType="editingDidBegin" id="Ztw-6V-rJw"/>
+                                                    <action selector="bopChangedAction:" destination="rzg-8R-MCt" eventType="editingChanged" id="w2X-Kc-gDc"/>
+                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Bop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQW-xS-Aq4">
                                                 <rect key="frame" x="10" y="17" width="75" height="18"/>
@@ -188,7 +192,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ueo-nz-Djb">
                                         <rect key="frame" x="0.0" y="0.0" width="187.5" height="100"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z6C-6z-2ir">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z6C-6z-2ir">
                                                 <rect key="frame" x="102.5" y="40" width="75" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="75" id="7dJ-9C-ndw"/>
@@ -197,6 +201,10 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                <connections>
+                                                    <action selector="bipBegin:" destination="rzg-8R-MCt" eventType="editingDidBegin" id="uNm-Co-w1X"/>
+                                                    <action selector="bipChangedAction:" destination="rzg-8R-MCt" eventType="editingChanged" id="Kay-d9-Tts"/>
+                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Bip" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OeU-3i-NmD">
                                                 <rect key="frame" x="105.5" y="17" width="69.5" height="18"/>
@@ -252,6 +260,7 @@
                             <constraint firstItem="7Pi-AL-Xvo" firstAttribute="top" secondItem="U4G-xB-kZU" secondAttribute="bottom" id="iuK-5h-g8l"/>
                             <constraint firstItem="7Pi-AL-Xvo" firstAttribute="leading" secondItem="hD5-NE-lX4" secondAttribute="leading" id="mcZ-ZD-BQ7"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="aQg-Ea-XED"/>
                     </view>
                     <connections>
                         <outlet property="fieldBipUI" destination="z6C-6z-2ir" id="Loe-88-4ZC"/>
@@ -273,8 +282,8 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zaW-ew-08k">
                                 <rect key="frame" x="20" y="50" width="335" height="264"/>
-                                <mutableString key="text">The exercise is based on a popular mental math game. Children usually sit around a table, first player says "1", and each next player counts up. The numbers which are divisible by either 3 or 5 are replaced with the corresponding word, in our case "Bip" and "Bop". If the number is divisible by both numbers, it becomes "Bip Bop". If a player makes a mistake, or takes too long, they are eliminated from the game. 
-This app generates a correct game sequence for selected numbers.</mutableString>
+                                <string key="text">The exercise is based on a popular mental math game. Children usually sit around a table, first player says "1", and each next player counts up. The numbers which are divisible by either 3 or 5 are replaced with the corresponding word, in our case "Bip" and "Bop". If the number is divisible by both numbers, it becomes "Bip Bop". If a player makes a mistake, or takes too long, they are eliminated from the game. 
+This app generates a correct game sequence for selected numbers.</string>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -286,6 +295,7 @@ This app generates a correct game sequence for selected numbers.</mutableString>
                             <constraint firstItem="zaW-ew-08k" firstAttribute="leading" secondItem="nwc-Uq-lhX" secondAttribute="leading" constant="20" id="Ug2-QK-2rn"/>
                             <constraint firstItem="zaW-ew-08k" firstAttribute="top" secondItem="nwc-Uq-lhX" secondAttribute="top" constant="50" id="Wtj-Xo-fL7"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="I9F-8r-C83"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L9L-OL-BYg" userLabel="First Responder" sceneMemberID="firstResponder"/>

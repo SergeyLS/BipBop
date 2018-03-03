@@ -32,8 +32,8 @@ class FirstViewController: BaseViewController {
     }
     
     fileprivate func setGradientBackground() {
-        let colorTop =  UIColor(red: 99.0/255.0, green: 114.0/255.0, blue: 241.0/255.0, alpha: 1.0).cgColor
-        let colorBottom = UIColor(red: 201.0/255.0, green: 70.0/255.0, blue: 234.0/255.0, alpha: 1.0).cgColor
+        let colorTop =  Constants.Colors.blue.cgColor
+        let colorBottom = Constants.Colors.red.cgColor
         
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [ colorTop, colorBottom]

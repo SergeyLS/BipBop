@@ -16,17 +16,18 @@ class TabBarViewController: BaseViewController {
     
     @IBOutlet weak var containerPlayUI: UIView!
     @IBOutlet weak var containerExplanationUI: UIView!
-    
+    @IBOutlet weak var topViewUI: UIView!
     
     fileprivate  var currentContainer: ContainerTab = .play {
         didSet {
             switch currentContainer {
             case .play:
-                playButtonUI.alpha = 1
-                explanationButtonUI.alpha = 0.3
+                self.playButtonUI.alpha = 1
+                self.explanationButtonUI.alpha = 0.3
+                
             case .explanation:
-                playButtonUI.alpha = 0.3
-                explanationButtonUI.alpha = 1
+                self.playButtonUI.alpha = 0.3
+                self.explanationButtonUI.alpha = 1
             }
             self.updateContainer()
         }
@@ -38,6 +39,8 @@ class TabBarViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.topViewUI.backgroundColor = Constants.Colors.blue
+        
         self.currentContainer = .play
     }
     
@@ -48,11 +51,15 @@ class TabBarViewController: BaseViewController {
     fileprivate func updateContainer()  {
         switch currentContainer {
         case .play:
-            containerPlayUI.alpha = 1
-            containerExplanationUI.alpha = 0
+            UIView.animate(withDuration: 0.5, animations: { [weak self] in
+                self?.containerPlayUI.alpha = 1
+                self?.containerExplanationUI.alpha = 0
+            })
         case .explanation:
-            containerPlayUI.alpha = 0
-            containerExplanationUI.alpha = 1
+            UIView.animate(withDuration: 0.5, animations: { [weak self] in
+                self?.containerPlayUI.alpha = 0
+                self?.containerExplanationUI.alpha = 1
+            })
         }
     }
     
