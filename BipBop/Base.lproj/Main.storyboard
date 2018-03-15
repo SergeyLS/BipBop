@@ -118,7 +118,7 @@
                                 </connections>
                             </containerView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.38823529411764707" green="0.44705882352941173" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="09k-m7-hVn" firstAttribute="trailing" secondItem="Ngq-38-0kK" secondAttribute="trailing" id="5gX-dJ-a1u"/>
                             <constraint firstItem="Ngq-38-0kK" firstAttribute="leading" secondItem="09k-m7-hVn" secondAttribute="leading" id="BSI-4i-AJh"/>
@@ -127,7 +127,7 @@
                             <constraint firstItem="oe4-WA-d9R" firstAttribute="leading" secondItem="09k-m7-hVn" secondAttribute="leading" id="Hrq-48-Xux"/>
                             <constraint firstItem="09k-m7-hVn" firstAttribute="bottom" secondItem="Ngq-38-0kK" secondAttribute="bottom" id="JnJ-SN-Pmp"/>
                             <constraint firstItem="Ngq-38-0kK" firstAttribute="top" secondItem="oe4-WA-d9R" secondAttribute="bottom" id="O6g-zP-5DL"/>
-                            <constraint firstItem="oe4-WA-d9R" firstAttribute="top" secondItem="1wn-vs-lZa" secondAttribute="top" id="eWE-C6-IwZ"/>
+                            <constraint firstItem="oe4-WA-d9R" firstAttribute="top" secondItem="09k-m7-hVn" secondAttribute="top" constant="-20" id="eWE-C6-IwZ"/>
                             <constraint firstItem="hB1-QY-coe" firstAttribute="top" secondItem="oe4-WA-d9R" secondAttribute="bottom" id="f2Q-Bu-HhW"/>
                             <constraint firstItem="09k-m7-hVn" firstAttribute="trailing" secondItem="oe4-WA-d9R" secondAttribute="trailing" id="l7a-yV-Kez"/>
                             <constraint firstItem="09k-m7-hVn" firstAttribute="trailing" secondItem="hB1-QY-coe" secondAttribute="trailing" id="rOa-ue-mUJ"/>
@@ -272,18 +272,18 @@
             </objects>
             <point key="canvasLocation" x="1616.8" y="-394.45277361319341"/>
         </scene>
-        <!--View Controller-->
+        <!--Rules View Controller-->
         <scene sceneID="yBx-ID-APk">
             <objects>
-                <viewController id="hmT-3b-6wq" sceneMemberID="viewController">
+                <viewController id="hmT-3b-6wq" customClass="RulesViewController" customModule="BipBop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nwc-Uq-lhX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="607"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zaW-ew-08k">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zaW-ew-08k">
                                 <rect key="frame" x="20" y="50" width="335" height="264"/>
-                                <string key="text">The exercise is based on a popular mental math game. Children usually sit around a table, first player says "1", and each next player counts up. The numbers which are divisible by either 3 or 5 are replaced with the corresponding word, in our case "Bip" and "Bop". If the number is divisible by both numbers, it becomes "Bip Bop". If a player makes a mistake, or takes too long, they are eliminated from the game. 
-This app generates a correct game sequence for selected numbers.</string>
+                                <mutableString key="text">The exercise is based on a popular mental math game. Children usually sit around a table, first player says "1", and each next player counts up. The numbers which are divisible by either 3 or 5 are replaced with the corresponding word, in our case "Bip" and "Bop". If the number is divisible by both numbers, it becomes "Bip Bop". If a player makes a mistake, or takes too long, they are eliminated from the game. 
+This app generates a correct game sequence for selected numbers.</mutableString>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -297,6 +297,9 @@ This app generates a correct game sequence for selected numbers.</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="I9F-8r-C83"/>
                     </view>
+                    <connections>
+                        <outlet property="rulesUI" destination="zaW-ew-08k" id="eNc-kj-ARq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L9L-OL-BYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

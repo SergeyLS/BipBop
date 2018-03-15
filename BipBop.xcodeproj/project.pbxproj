@@ -17,6 +17,7 @@
 		F71C4383204952D1004CDCFF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71C4382204952D1004CDCFF /* BaseViewController.swift */; };
 		F71C438520495671004CDCFF /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71C438420495671004CDCFF /* GameViewController.swift */; };
 		F7439AAF204AB43E006096F1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7439AAE204AB43E006096F1 /* Constants.swift */; };
+		F74BA09D205A6734004A7874 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74BA09C205A6734004A7874 /* RulesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		F71C4382204952D1004CDCFF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F71C438420495671004CDCFF /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		F7439AAE204AB43E006096F1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F74BA09C205A6734004A7874 /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RulesViewController.swift; path = ViewControllers/RulesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				F71C4373204944B5004CDCFF /* ViewControllers */,
 				F71C435E20494327004CDCFF /* AppDelegate.swift */,
 				F7439AAE204AB43E006096F1 /* Constants.swift */,
+				F74BA09C205A6734004A7874 /* RulesViewController.swift */,
 				F71C436220494327004CDCFF /* Main.storyboard */,
 				F71C436520494327004CDCFF /* Assets.xcassets */,
 				F71C436720494327004CDCFF /* LaunchScreen.storyboard */,
@@ -181,6 +184,7 @@
 				F71C435F20494327004CDCFF /* AppDelegate.swift in Sources */,
 				F71C4380204950EE004CDCFF /* ContainerTab.swift in Sources */,
 				F71C4383204952D1004CDCFF /* BaseViewController.swift in Sources */,
+				F74BA09D205A6734004A7874 /* RulesViewController.swift in Sources */,
 				F7439AAF204AB43E006096F1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
